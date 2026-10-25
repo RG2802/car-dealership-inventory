@@ -7,28 +7,6 @@ from backend.app import create_app
 
 SECRET = 'test-only-secret-at-least-32-characters-long'
 
-@pytest.fixture
-def client(tmp_path):
-    app = create_app(str(tmp_path / 'test.db'), SECRET)
-    with TestClient(app) as c:
-        yield c
-
-@pytest.fixture
-def credentials():
-    return {'email': 'buyer@example.com', 'password': 'CorrectHorse42!'}
-
-@pytest.fixture
-def user(client, credentials):
-    response = client.post('/api/auth/register', json=credentials)
-    assert response.status_code == 201
-    return {'Authorization': 'Bearer ' + response.json()['access_token']}
-
-@pytest.fixture
-def admin(client, user):
-    with sqlite3.connect(client.app.state.db_path) as db:
-        db.execute("UPDATE users SET role='admin'")
-    return user
-
 def test_register_login_and_password_hash(client, credentials):
     response = client.post('/api/auth/register', json=credentials)
     assert response.status_code == 201

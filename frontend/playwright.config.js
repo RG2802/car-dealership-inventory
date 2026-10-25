@@ -11,7 +11,10 @@ export default defineConfig({
   },
   webServer: [
     {
-      command: ".venv/bin/python -m backend.e2e_server",
+      command:
+  process.platform === "win32"
+    ? ".\\.venv\\Scripts\\python.exe -m backend.e2e_server"
+    : ".venv/bin/python -m backend.e2e_server",
       cwd: "..",
       url: "http://127.0.0.1:8000/docs",
       reuseExistingServer: false,

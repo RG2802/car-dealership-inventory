@@ -9,3 +9,5 @@ htmlcov/
 node_modules/
 dist/
 test-results/
+
+dealership-history.bundle

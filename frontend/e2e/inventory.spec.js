@@ -7,7 +7,7 @@ test("admin manages inventory, filters and purchases; responsive screenshots", a
   await page.screenshot({ path: "../docs/login.png", fullPage: true });
   await page.getByLabel("Email address").fill("admin@example.com");
   await page.getByLabel("Password", { exact: true }).fill("AdminTesting42!");
-  await page.getByRole("button", { name: "Sign in", exact: true }).click();
+  await page.getByRole("button", { name: /^Sign in/ }).click();
   await expect(
     page.getByRole("heading", { name: "Find your next drive." }),
   ).toBeVisible();
@@ -92,5 +92,7 @@ test("buyer registers, sees sold-out state and cannot see admin controls", async
     .filter({ hasText: "Camry" })
     .getByRole("button", { name: "Purchase", exact: true })
     .click();
-  await expect(page.getByRole("status")).toContainText("Purchase recorded");
+  await expect(
+  page.getByRole("status").filter({ hasText: "Purchase recorded" })
+).toBeVisible();
 });

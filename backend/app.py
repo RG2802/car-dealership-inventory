@@ -1,11 +1,13 @@
 import os
 import sqlite3
 import jwt
-from fastapi import FastAPI, Depends, HTTPException
+from fastapi import FastAPI, Depends, HTTPException, Query, Response
+from decimal import Decimal
+from backend import inventory
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from fastapi.middleware.cors import CORSMiddleware
 from backend.db import connect, initialize
-from backend.schemas import Credentials
+from backend.schemas import Credentials, VehicleInput, StockInput
 from backend.security import passwords, DUMMY_HASH, token_for
 
 bearer = HTTPBearer(auto_error=False)
@@ -60,8 +62,43 @@ def create_app(db_path=None, secret=None):
     def me(user=Depends(current_user)):
         return user
 
+    def admin_user(user=Depends(current_user)):
+        if user['role'] != 'admin':
+            raise HTTPException(403, 'Administrator access required')
+        return user
+
     @app.get('/api/vehicles')
     def vehicles(user=Depends(current_user)):
-        return []
+        return inventory.list_vehicles(db_path)
+
+    @app.get('/api/vehicles/search')
+    def search(make: str = Query('', max_length=80), model: str = Query('', max_length=80),
+               category: str = Query('', max_length=40),
+               min_price: Decimal | None = Query(None, ge=0, le=100000000),
+               max_price: Decimal | None = Query(None, ge=0, le=100000000), user=Depends(current_user)):
+        if min_price is not None and max_price is not None and min_price > max_price:
+            raise HTTPException(422, 'Minimum price must not exceed maximum price')
+        return inventory.list_vehicles(db_path, make, model, category, min_price, max_price)
+
+    @app.post('/api/vehicles', status_code=201)
+    def add(data: VehicleInput, user=Depends(current_user)):
+        return inventory.save(db_path, data)
+
+    @app.put('/api/vehicles/{vehicle_id}')
+    def update(vehicle_id: int, data: VehicleInput, user=Depends(current_user)):
+        return inventory.save(db_path, data, vehicle_id)
+
+    @app.delete('/api/vehicles/{vehicle_id}', status_code=204)
+    def remove(vehicle_id: int, user=Depends(admin_user)):
+        inventory.delete(db_path, vehicle_id)
+        return Response(status_code=204)
+
+    @app.post('/api/vehicles/{vehicle_id}/purchase')
+    def purchase(vehicle_id: int, data: StockInput, user=Depends(current_user)):
+        return inventory.change_stock(db_path, vehicle_id, data.quantity)
+
+    @app.post('/api/vehicles/{vehicle_id}/restock')
+    def restock(vehicle_id: int, data: StockInput, user=Depends(admin_user)):
+        return inventory.change_stock(db_path, vehicle_id, data.quantity, restock=True)
 
     return app

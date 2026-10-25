@@ -1,0 +1,15 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> apex-dealership@1.0.0 test
+> vitest run
+
+
+ RUN  v3.2.7 /workspace/scratch/820a941666ae/dealership/frontend
+
+ ✓ src/VehicleCard.test.jsx (5 tests) 123ms
+
+ Test Files  1 passed (1)
+      Tests  5 passed (5)
+   Start at  11:16:29
+   Duration  720ms (transform 40ms, setup 100ms, collect 33ms, tests 123ms, environment 268ms, prepare 57ms)
+

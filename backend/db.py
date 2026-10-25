@@ -1,7 +1,9 @@
 """SQLite connections are short-lived; database constraints protect invariants."""
+
 import sqlite3
 from contextlib import contextmanager
 from pathlib import Path
+
 
 @contextmanager
 def connect(path):
@@ -13,11 +15,12 @@ def connect(path):
     finally:
         db.close()
 
+
 def initialize(path):
     Path(path).parent.mkdir(parents=True, exist_ok=True)
     with connect(path) as db:
-        db.execute('PRAGMA journal_mode=WAL')
-        db.executescript('''
+        db.execute("PRAGMA journal_mode=WAL")
+        db.executescript("""
             CREATE TABLE IF NOT EXISTS users (
                 id INTEGER PRIMARY KEY,
                 email TEXT NOT NULL UNIQUE COLLATE NOCASE,
@@ -30,4 +33,4 @@ def initialize(path):
                 price_cents INTEGER NOT NULL CHECK(price_cents >= 0),
                 quantity INTEGER NOT NULL CHECK(quantity BETWEEN 0 AND 1000000)
             );
-        ''')
+        """)

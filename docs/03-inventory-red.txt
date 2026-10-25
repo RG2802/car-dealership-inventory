@@ -1,0 +1,545 @@
+..........EEEEEEEEEFFFFFFFFFFFEEEEEEEEFFFFFF...EE                        [100%]
+==================================== ERRORS ====================================
+_________________ ERROR at setup of test_crud_and_persistence __________________
+
+client = <starlette.testclient.TestClient object at 0x7f0323649e80>
+user = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzkyOTA2NzQ4LCJleHAiOjE3OTI5MTAzNDh9.-TGYy1FqnGRxWVKozqElDVcBdKCY-tj7T2RNEEFN08U'}
+
+    @pytest.fixture
+    def vehicle(client, user):
+        r = client.post('/api/vehicles', json=CAR, headers=user)
+>       assert r.status_code == 201
+E       assert 405 == 201
+E        +  where 405 = <Response [405 Method Not Allowed]>.status_code
+
+backend/tests/test_inventory.py:12: AssertionError
+__________________ ERROR at setup of test_search[make=toy-1] ___________________
+
+client = <starlette.testclient.TestClient object at 0x7f032349ce60>
+user = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzkyOTA2NzQ4LCJleHAiOjE3OTI5MTAzNDh9.-TGYy1FqnGRxWVKozqElDVcBdKCY-tj7T2RNEEFN08U'}
+
+    @pytest.fixture
+    def vehicle(client, user):
+        r = client.post('/api/vehicles', json=CAR, headers=user)
+>       assert r.status_code == 201
+E       assert 405 == 201
+E        +  where 405 = <Response [405 Method Not Allowed]>.status_code
+
+backend/tests/test_inventory.py:12: AssertionError
+__________________ ERROR at setup of test_search[model=CAM-1] __________________
+
+client = <starlette.testclient.TestClient object at 0x7f0323474f50>
+user = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzkyOTA2NzQ4LCJleHAiOjE3OTI5MTAzNDh9.-TGYy1FqnGRxWVKozqElDVcBdKCY-tj7T2RNEEFN08U'}
+
+    @pytest.fixture
+    def vehicle(client, user):
+        r = client.post('/api/vehicles', json=CAR, headers=user)
+>       assert r.status_code == 201
+E       assert 405 == 201
+E        +  where 405 = <Response [405 Method Not Allowed]>.status_code
+
+backend/tests/test_inventory.py:12: AssertionError
+_______________ ERROR at setup of test_search[category=sedan-1] ________________
+
+client = <starlette.testclient.TestClient object at 0x7f03234de570>
+user = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzkyOTA2NzQ4LCJleHAiOjE3OTI5MTAzNDh9.-TGYy1FqnGRxWVKozqElDVcBdKCY-tj7T2RNEEFN08U'}
+
+    @pytest.fixture
+    def vehicle(client, user):
+        r = client.post('/api/vehicles', json=CAR, headers=user)
+>       assert r.status_code == 201
+E       assert 405 == 201
+E        +  where 405 = <Response [405 Method Not Allowed]>.status_code
+
+backend/tests/test_inventory.py:12: AssertionError
+_______ ERROR at setup of test_search[min_price=32500&max_price=32501-1] _______
+
+client = <starlette.testclient.TestClient object at 0x7f03234e27e0>
+user = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzkyOTA2NzQ4LCJleHAiOjE3OTI5MTAzNDh9.-TGYy1FqnGRxWVKozqElDVcBdKCY-tj7T2RNEEFN08U'}
+
+    @pytest.fixture
+    def vehicle(client, user):
+        r = client.post('/api/vehicles', json=CAR, headers=user)
+>       assert r.status_code == 201
+E       assert 405 == 201
+E        +  where 405 = <Response [405 Method Not Allowed]>.status_code
+
+backend/tests/test_inventory.py:12: AssertionError
+________________ ERROR at setup of test_search[max_price=100-0] ________________
+
+client = <starlette.testclient.TestClient object at 0x7f03234e1670>
+user = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzkyOTA2NzQ5LCJleHAiOjE3OTI5MTAzNDl9.1LLhITra1teVWwOmXwxnwgi9jddbRfOTn5GTgc-Wa_4'}
+
+    @pytest.fixture
+    def vehicle(client, user):
+        r = client.post('/api/vehicles', json=CAR, headers=user)
+>       assert r.status_code == 201
+E       assert 405 == 201
+E        +  where 405 = <Response [405 Method Not Allowed]>.status_code
+
+backend/tests/test_inventory.py:12: AssertionError
+__________________ ERROR at setup of test_search[make=Ford-0] __________________
+
+client = <starlette.testclient.TestClient object at 0x7f03234dcbf0>
+user = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzkyOTA2NzQ5LCJleHAiOjE3OTI5MTAzNDl9.1LLhITra1teVWwOmXwxnwgi9jddbRfOTn5GTgc-Wa_4'}
+
+    @pytest.fixture
+    def vehicle(client, user):
+        r = client.post('/api/vehicles', json=CAR, headers=user)
+>       assert r.status_code == 201
+E       assert 405 == 201
+E        +  where 405 = <Response [405 Method Not Allowed]>.status_code
+
+backend/tests/test_inventory.py:12: AssertionError
+__________________ ERROR at setup of test_search[make=%25-0] ___________________
+
+client = <starlette.testclient.TestClient object at 0x7f0323477500>
+user = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzkyOTA2NzQ5LCJleHAiOjE3OTI5MTAzNDl9.1LLhITra1teVWwOmXwxnwgi9jddbRfOTn5GTgc-Wa_4'}
+
+    @pytest.fixture
+    def vehicle(client, user):
+        r = client.post('/api/vehicles', json=CAR, headers=user)
+>       assert r.status_code == 201
+E       assert 405 == 201
+E        +  where 405 = <Response [405 Method Not Allowed]>.status_code
+
+backend/tests/test_inventory.py:12: AssertionError
+___________ ERROR at setup of test_search[make=%27%20OR%201%3D1---0] ___________
+
+client = <starlette.testclient.TestClient object at 0x7f032364be90>
+user = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzkyOTA2NzQ5LCJleHAiOjE3OTI5MTAzNDl9.1LLhITra1teVWwOmXwxnwgi9jddbRfOTn5GTgc-Wa_4'}
+
+    @pytest.fixture
+    def vehicle(client, user):
+        r = client.post('/api/vehicles', json=CAR, headers=user)
+>       assert r.status_code == 201
+E       assert 405 == 201
+E        +  where 405 = <Response [405 Method Not Allowed]>.status_code
+
+backend/tests/test_inventory.py:12: AssertionError
+_______________ ERROR at setup of test_purchase_and_out_of_stock _______________
+
+client = <starlette.testclient.TestClient object at 0x7f0323480260>
+user = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzkyOTA2NzQ5LCJleHAiOjE3OTI5MTAzNDl9.1LLhITra1teVWwOmXwxnwgi9jddbRfOTn5GTgc-Wa_4'}
+
+    @pytest.fixture
+    def vehicle(client, user):
+        r = client.post('/api/vehicles', json=CAR, headers=user)
+>       assert r.status_code == 201
+E       assert 405 == 201
+E        +  where 405 = <Response [405 Method Not Allowed]>.status_code
+
+backend/tests/test_inventory.py:12: AssertionError
+__________________ ERROR at setup of test_invalid_purchase[0] __________________
+
+client = <starlette.testclient.TestClient object at 0x7f0323549c70>
+user = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzkyOTA2NzUwLCJleHAiOjE3OTI5MTAzNTB9.vCf2xbhrxEvpU8B57IVf3ynwcPo_l8yheLIdu6Z_tns'}
+
+    @pytest.fixture
+    def vehicle(client, user):
+        r = client.post('/api/vehicles', json=CAR, headers=user)
+>       assert r.status_code == 201
+E       assert 405 == 201
+E        +  where 405 = <Response [405 Method Not Allowed]>.status_code
+
+backend/tests/test_inventory.py:12: AssertionError
+_________________ ERROR at setup of test_invalid_purchase[-1] __________________
+
+client = <starlette.testclient.TestClient object at 0x7f0323555850>
+user = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzkyOTA2NzUwLCJleHAiOjE3OTI5MTAzNTB9.vCf2xbhrxEvpU8B57IVf3ynwcPo_l8yheLIdu6Z_tns'}
+
+    @pytest.fixture
+    def vehicle(client, user):
+        r = client.post('/api/vehicles', json=CAR, headers=user)
+>       assert r.status_code == 201
+E       assert 405 == 201
+E        +  where 405 = <Response [405 Method Not Allowed]>.status_code
+
+backend/tests/test_inventory.py:12: AssertionError
+_________________ ERROR at setup of test_invalid_purchase[1.2] _________________
+
+client = <starlette.testclient.TestClient object at 0x7f03235177d0>
+user = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzkyOTA2NzUwLCJleHAiOjE3OTI5MTAzNTB9.vCf2xbhrxEvpU8B57IVf3ynwcPo_l8yheLIdu6Z_tns'}
+
+    @pytest.fixture
+    def vehicle(client, user):
+        r = client.post('/api/vehicles', json=CAR, headers=user)
+>       assert r.status_code == 201
+E       assert 405 == 201
+E        +  where 405 = <Response [405 Method Not Allowed]>.status_code
+
+backend/tests/test_inventory.py:12: AssertionError
+________________ ERROR at setup of test_invalid_purchase[True] _________________
+
+client = <starlette.testclient.TestClient object at 0x7f032354b650>
+user = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzkyOTA2NzUwLCJleHAiOjE3OTI5MTAzNTB9.vCf2xbhrxEvpU8B57IVf3ynwcPo_l8yheLIdu6Z_tns'}
+
+    @pytest.fixture
+    def vehicle(client, user):
+        r = client.post('/api/vehicles', json=CAR, headers=user)
+>       assert r.status_code == 201
+E       assert 405 == 201
+E        +  where 405 = <Response [405 Method Not Allowed]>.status_code
+
+backend/tests/test_inventory.py:12: AssertionError
+_______________ ERROR at setup of test_invalid_purchase[1000001] _______________
+
+client = <starlette.testclient.TestClient object at 0x7f0323477740>
+user = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzkyOTA2NzUwLCJleHAiOjE3OTI5MTAzNTB9.vCf2xbhrxEvpU8B57IVf3ynwcPo_l8yheLIdu6Z_tns'}
+
+    @pytest.fixture
+    def vehicle(client, user):
+        r = client.post('/api/vehicles', json=CAR, headers=user)
+>       assert r.status_code == 201
+E       assert 405 == 201
+E        +  where 405 = <Response [405 Method Not Allowed]>.status_code
+
+backend/tests/test_inventory.py:12: AssertionError
+___________________ ERROR at setup of test_admin_permissions ___________________
+
+client = <starlette.testclient.TestClient object at 0x7f03235073e0>
+user = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzkyOTA2NzUwLCJleHAiOjE3OTI5MTAzNTB9.vCf2xbhrxEvpU8B57IVf3ynwcPo_l8yheLIdu6Z_tns'}
+
+    @pytest.fixture
+    def vehicle(client, user):
+        r = client.post('/api/vehicles', json=CAR, headers=user)
+>       assert r.status_code == 201
+E       assert 405 == 201
+E        +  where 405 = <Response [405 Method Not Allowed]>.status_code
+
+backend/tests/test_inventory.py:12: AssertionError
+_________________ ERROR at setup of test_admin_restock_delete __________________
+
+client = <starlette.testclient.TestClient object at 0x7f032354f110>
+user = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzkyOTA2NzUwLCJleHAiOjE3OTI5MTAzNTB9.vCf2xbhrxEvpU8B57IVf3ynwcPo_l8yheLIdu6Z_tns'}
+
+    @pytest.fixture
+    def vehicle(client, user):
+        r = client.post('/api/vehicles', json=CAR, headers=user)
+>       assert r.status_code == 201
+E       assert 405 == 201
+E        +  where 405 = <Response [405 Method Not Allowed]>.status_code
+
+backend/tests/test_inventory.py:12: AssertionError
+__________ ERROR at setup of test_concurrent_purchase_cannot_oversell __________
+
+client = <starlette.testclient.TestClient object at 0x7f0323506000>
+user = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzkyOTA2NzUwLCJleHAiOjE3OTI5MTAzNTB9.vCf2xbhrxEvpU8B57IVf3ynwcPo_l8yheLIdu6Z_tns'}
+
+    @pytest.fixture
+    def vehicle(client, user):
+        r = client.post('/api/vehicles', json=CAR, headers=user)
+>       assert r.status_code == 201
+E       assert 405 == 201
+E        +  where 405 = <Response [405 Method Not Allowed]>.status_code
+
+backend/tests/test_inventory.py:12: AssertionError
+_____________________ ERROR at setup of test_restock_limit _____________________
+
+client = <starlette.testclient.TestClient object at 0x7f032354d700>
+user = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzkyOTA2NzUxLCJleHAiOjE3OTI5MTAzNTF9.plgJSMmyUEZG7rJdhsrtx19TFxWtY94-zbN1OoPxtoo'}
+
+    @pytest.fixture
+    def vehicle(client, user):
+        r = client.post('/api/vehicles', json=CAR, headers=user)
+>       assert r.status_code == 201
+E       assert 405 == 201
+E        +  where 405 = <Response [405 Method Not Allowed]>.status_code
+
+backend/tests/test_inventory.py:12: AssertionError
+=================================== FAILURES ===================================
+___________________ test_invalid_price_filter[min_price=-1] ____________________
+
+client = <starlette.testclient.TestClient object at 0x7f0323480da0>
+user = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzkyOTA2NzQ5LCJleHAiOjE3OTI5MTAzNDl9.1LLhITra1teVWwOmXwxnwgi9jddbRfOTn5GTgc-Wa_4'}
+query = 'min_price=-1'
+
+    @pytest.mark.parametrize('query', ['min_price=-1','min_price=100&max_price=1','max_price=NaN'])
+    def test_invalid_price_filter(client, user, query):
+>       assert client.get('/api/vehicles/search?'+query, headers=user).status_code == 422
+E       AssertionError: assert 404 == 422
+E        +  where 404 = <Response [404 Not Found]>.status_code
+E        +    where <Response [404 Not Found]> = get(('/api/vehicles/search?' + 'min_price=-1'), headers={'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzkyOTA2NzQ5LCJleHAiOjE3OTI5MTAzNDl9.1LLhITra1teVWwOmXwxnwgi9jddbRfOTn5GTgc-Wa_4'})
+E        +      where get = <starlette.testclient.TestClient object at 0x7f0323480da0>.get
+
+backend/tests/test_inventory.py:31: AssertionError
+_____________ test_invalid_price_filter[min_price=100&max_price=1] _____________
+
+client = <starlette.testclient.TestClient object at 0x7f03234e5250>
+user = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzkyOTA2NzQ5LCJleHAiOjE3OTI5MTAzNDl9.1LLhITra1teVWwOmXwxnwgi9jddbRfOTn5GTgc-Wa_4'}
+query = 'min_price=100&max_price=1'
+
+    @pytest.mark.parametrize('query', ['min_price=-1','min_price=100&max_price=1','max_price=NaN'])
+    def test_invalid_price_filter(client, user, query):
+>       assert client.get('/api/vehicles/search?'+query, headers=user).status_code == 422
+E       AssertionError: assert 404 == 422
+E        +  where 404 = <Response [404 Not Found]>.status_code
+E        +    where <Response [404 Not Found]> = get(('/api/vehicles/search?' + 'min_price=100&max_price=1'), headers={'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzkyOTA2NzQ5LCJleHAiOjE3OTI5MTAzNDl9.1LLhITra1teVWwOmXwxnwgi9jddbRfOTn5GTgc-Wa_4'})
+E        +      where get = <starlette.testclient.TestClient object at 0x7f03234e5250>.get
+
+backend/tests/test_inventory.py:31: AssertionError
+___________________ test_invalid_price_filter[max_price=NaN] ___________________
+
+client = <starlette.testclient.TestClient object at 0x7f03234817c0>
+user = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzkyOTA2NzQ5LCJleHAiOjE3OTI5MTAzNDl9.1LLhITra1teVWwOmXwxnwgi9jddbRfOTn5GTgc-Wa_4'}
+query = 'max_price=NaN'
+
+    @pytest.mark.parametrize('query', ['min_price=-1','min_price=100&max_price=1','max_price=NaN'])
+    def test_invalid_price_filter(client, user, query):
+>       assert client.get('/api/vehicles/search?'+query, headers=user).status_code == 422
+E       AssertionError: assert 404 == 422
+E        +  where 404 = <Response [404 Not Found]>.status_code
+E        +    where <Response [404 Not Found]> = get(('/api/vehicles/search?' + 'max_price=NaN'), headers={'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzkyOTA2NzQ5LCJleHAiOjE3OTI5MTAzNDl9.1LLhITra1teVWwOmXwxnwgi9jddbRfOTn5GTgc-Wa_4'})
+E        +      where get = <starlette.testclient.TestClient object at 0x7f03234817c0>.get
+
+backend/tests/test_inventory.py:31: AssertionError
+________________________ test_invalid_vehicle[price--1] ________________________
+
+client = <starlette.testclient.TestClient object at 0x7f032349d1c0>
+user = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzkyOTA2NzQ5LCJleHAiOjE3OTI5MTAzNDl9.1LLhITra1teVWwOmXwxnwgi9jddbRfOTn5GTgc-Wa_4'}
+field = 'price', value = -1
+
+    @pytest.mark.parametrize('field,value', [('price',-1),('price','1.234'),('quantity',-1),('quantity',1.5),('quantity',True),('make','  '),('model',''),('category','')])
+    def test_invalid_vehicle(client, user, field, value):
+>       assert client.post('/api/vehicles', headers=user, json={**CAR,field:value}).status_code == 422
+E       AssertionError: assert 405 == 422
+E        +  where 405 = <Response [405 Method Not Allowed]>.status_code
+E        +    where <Response [405 Method Not Allowed]> = post('/api/vehicles', headers={'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzkyOTA2NzQ5LCJleHAiOjE3OTI5MTAzNDl9.1LLhITra1teVWwOmXwxnwgi9jddbRfOTn5GTgc-Wa_4'}, json={'make': 'Toyota', 'model': 'Camry', 'category': 'Sedan', 'price': -1, ...})
+E        +      where post = <starlette.testclient.TestClient object at 0x7f032349d1c0>.post
+
+backend/tests/test_inventory.py:35: AssertionError
+______________________ test_invalid_vehicle[price-1.234] _______________________
+
+client = <starlette.testclient.TestClient object at 0x7f0323476bd0>
+user = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzkyOTA2NzQ5LCJleHAiOjE3OTI5MTAzNDl9.1LLhITra1teVWwOmXwxnwgi9jddbRfOTn5GTgc-Wa_4'}
+field = 'price', value = '1.234'
+
+    @pytest.mark.parametrize('field,value', [('price',-1),('price','1.234'),('quantity',-1),('quantity',1.5),('quantity',True),('make','  '),('model',''),('category','')])
+    def test_invalid_vehicle(client, user, field, value):
+>       assert client.post('/api/vehicles', headers=user, json={**CAR,field:value}).status_code == 422
+E       AssertionError: assert 405 == 422
+E        +  where 405 = <Response [405 Method Not Allowed]>.status_code
+E        +    where <Response [405 Method Not Allowed]> = post('/api/vehicles', headers={'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzkyOTA2NzQ5LCJleHAiOjE3OTI5MTAzNDl9.1LLhITra1teVWwOmXwxnwgi9jddbRfOTn5GTgc-Wa_4'}, json={'make': 'Toyota', 'model': 'Camry', 'category': 'Sedan', 'price': '1.234', ...})
+E        +      where post = <starlette.testclient.TestClient object at 0x7f0323476bd0>.post
+
+backend/tests/test_inventory.py:35: AssertionError
+______________________ test_invalid_vehicle[quantity--1] _______________________
+
+client = <starlette.testclient.TestClient object at 0x7f03234dcbf0>
+user = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzkyOTA2NzQ5LCJleHAiOjE3OTI5MTAzNDl9.1LLhITra1teVWwOmXwxnwgi9jddbRfOTn5GTgc-Wa_4'}
+field = 'quantity', value = -1
+
+    @pytest.mark.parametrize('field,value', [('price',-1),('price','1.234'),('quantity',-1),('quantity',1.5),('quantity',True),('make','  '),('model',''),('category','')])
+    def test_invalid_vehicle(client, user, field, value):
+>       assert client.post('/api/vehicles', headers=user, json={**CAR,field:value}).status_code == 422
+E       AssertionError: assert 405 == 422
+E        +  where 405 = <Response [405 Method Not Allowed]>.status_code
+E        +    where <Response [405 Method Not Allowed]> = post('/api/vehicles', headers={'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzkyOTA2NzQ5LCJleHAiOjE3OTI5MTAzNDl9.1LLhITra1teVWwOmXwxnwgi9jddbRfOTn5GTgc-Wa_4'}, json={'make': 'Toyota', 'model': 'Camry', 'category': 'Sedan', 'price': '32500.25', ...})
+E        +      where post = <starlette.testclient.TestClient object at 0x7f03234dcbf0>.post
+
+backend/tests/test_inventory.py:35: AssertionError
+______________________ test_invalid_vehicle[quantity-1.5] ______________________
+
+client = <starlette.testclient.TestClient object at 0x7f03235067e0>
+user = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzkyOTA2NzQ5LCJleHAiOjE3OTI5MTAzNDl9.1LLhITra1teVWwOmXwxnwgi9jddbRfOTn5GTgc-Wa_4'}
+field = 'quantity', value = 1.5
+
+    @pytest.mark.parametrize('field,value', [('price',-1),('price','1.234'),('quantity',-1),('quantity',1.5),('quantity',True),('make','  '),('model',''),('category','')])
+    def test_invalid_vehicle(client, user, field, value):
+>       assert client.post('/api/vehicles', headers=user, json={**CAR,field:value}).status_code == 422
+E       AssertionError: assert 405 == 422
+E        +  where 405 = <Response [405 Method Not Allowed]>.status_code
+E        +    where <Response [405 Method Not Allowed]> = post('/api/vehicles', headers={'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzkyOTA2NzQ5LCJleHAiOjE3OTI5MTAzNDl9.1LLhITra1teVWwOmXwxnwgi9jddbRfOTn5GTgc-Wa_4'}, json={'make': 'Toyota', 'model': 'Camry', 'category': 'Sedan', 'price': '32500.25', ...})
+E        +      where post = <starlette.testclient.TestClient object at 0x7f03235067e0>.post
+
+backend/tests/test_inventory.py:35: AssertionError
+_____________________ test_invalid_vehicle[quantity-True] ______________________
+
+client = <starlette.testclient.TestClient object at 0x7f03235225d0>
+user = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzkyOTA2NzQ5LCJleHAiOjE3OTI5MTAzNDl9.1LLhITra1teVWwOmXwxnwgi9jddbRfOTn5GTgc-Wa_4'}
+field = 'quantity', value = True
+
+    @pytest.mark.parametrize('field,value', [('price',-1),('price','1.234'),('quantity',-1),('quantity',1.5),('quantity',True),('make','  '),('model',''),('category','')])
+    def test_invalid_vehicle(client, user, field, value):
+>       assert client.post('/api/vehicles', headers=user, json={**CAR,field:value}).status_code == 422
+E       AssertionError: assert 405 == 422
+E        +  where 405 = <Response [405 Method Not Allowed]>.status_code
+E        +    where <Response [405 Method Not Allowed]> = post('/api/vehicles', headers={'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzkyOTA2NzQ5LCJleHAiOjE3OTI5MTAzNDl9.1LLhITra1teVWwOmXwxnwgi9jddbRfOTn5GTgc-Wa_4'}, json={'make': 'Toyota', 'model': 'Camry', 'category': 'Sedan', 'price': '32500.25', ...})
+E        +      where post = <starlette.testclient.TestClient object at 0x7f03235225d0>.post
+
+backend/tests/test_inventory.py:35: AssertionError
+________________________ test_invalid_vehicle[make-  ] _________________________
+
+client = <starlette.testclient.TestClient object at 0x7f0323505a30>
+user = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzkyOTA2NzQ5LCJleHAiOjE3OTI5MTAzNDl9.1LLhITra1teVWwOmXwxnwgi9jddbRfOTn5GTgc-Wa_4'}
+field = 'make', value = '  '
+
+    @pytest.mark.parametrize('field,value', [('price',-1),('price','1.234'),('quantity',-1),('quantity',1.5),('quantity',True),('make','  '),('model',''),('category','')])
+    def test_invalid_vehicle(client, user, field, value):
+>       assert client.post('/api/vehicles', headers=user, json={**CAR,field:value}).status_code == 422
+E       AssertionError: assert 405 == 422
+E        +  where 405 = <Response [405 Method Not Allowed]>.status_code
+E        +    where <Response [405 Method Not Allowed]> = post('/api/vehicles', headers={'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzkyOTA2NzQ5LCJleHAiOjE3OTI5MTAzNDl9.1LLhITra1teVWwOmXwxnwgi9jddbRfOTn5GTgc-Wa_4'}, json={'make': '  ', 'model': 'Camry', 'category': 'Sedan', 'price': '32500.25', ...})
+E        +      where post = <starlette.testclient.TestClient object at 0x7f0323505a30>.post
+
+backend/tests/test_inventory.py:35: AssertionError
+_________________________ test_invalid_vehicle[model-] _________________________
+
+client = <starlette.testclient.TestClient object at 0x7f03234e1e80>
+user = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzkyOTA2NzQ5LCJleHAiOjE3OTI5MTAzNDl9.1LLhITra1teVWwOmXwxnwgi9jddbRfOTn5GTgc-Wa_4'}
+field = 'model', value = ''
+
+    @pytest.mark.parametrize('field,value', [('price',-1),('price','1.234'),('quantity',-1),('quantity',1.5),('quantity',True),('make','  '),('model',''),('category','')])
+    def test_invalid_vehicle(client, user, field, value):
+>       assert client.post('/api/vehicles', headers=user, json={**CAR,field:value}).status_code == 422
+E       AssertionError: assert 405 == 422
+E        +  where 405 = <Response [405 Method Not Allowed]>.status_code
+E        +    where <Response [405 Method Not Allowed]> = post('/api/vehicles', headers={'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzkyOTA2NzQ5LCJleHAiOjE3OTI5MTAzNDl9.1LLhITra1teVWwOmXwxnwgi9jddbRfOTn5GTgc-Wa_4'}, json={'make': 'Toyota', 'model': '', 'category': 'Sedan', 'price': '32500.25', ...})
+E        +      where post = <starlette.testclient.TestClient object at 0x7f03234e1e80>.post
+
+backend/tests/test_inventory.py:35: AssertionError
+_______________________ test_invalid_vehicle[category-] ________________________
+
+client = <starlette.testclient.TestClient object at 0x7f032349f110>
+user = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzkyOTA2NzQ5LCJleHAiOjE3OTI5MTAzNDl9.1LLhITra1teVWwOmXwxnwgi9jddbRfOTn5GTgc-Wa_4'}
+field = 'category', value = ''
+
+    @pytest.mark.parametrize('field,value', [('price',-1),('price','1.234'),('quantity',-1),('quantity',1.5),('quantity',True),('make','  '),('model',''),('category','')])
+    def test_invalid_vehicle(client, user, field, value):
+>       assert client.post('/api/vehicles', headers=user, json={**CAR,field:value}).status_code == 422
+E       AssertionError: assert 405 == 422
+E        +  where 405 = <Response [405 Method Not Allowed]>.status_code
+E        +    where <Response [405 Method Not Allowed]> = post('/api/vehicles', headers={'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzkyOTA2NzQ5LCJleHAiOjE3OTI5MTAzNDl9.1LLhITra1teVWwOmXwxnwgi9jddbRfOTn5GTgc-Wa_4'}, json={'make': 'Toyota', 'model': 'Camry', 'category': '', 'price': '32500.25', ...})
+E        +      where post = <starlette.testclient.TestClient object at 0x7f032349f110>.post
+
+backend/tests/test_inventory.py:35: AssertionError
+__________________ test_all_routes_require_auth[post--body0] ___________________
+
+client = <starlette.testclient.TestClient object at 0x7f032237b1d0>
+method = 'post', path = ''
+body = {'make': 'Toyota', 'model': 'Camry', 'category': 'Sedan', 'price': '32500.25', ...}
+
+    @pytest.mark.parametrize('method,path,body', [('post','',CAR),('put','/1',CAR),('delete','/1',None),('post','/1/purchase',{'quantity':1}),('post','/1/restock',{'quantity':1}),('get','/search',None)])
+    def test_all_routes_require_auth(client, method, path, body):
+>       assert client.request(method,'/api/vehicles'+path,json=body).status_code == 401
+E       AssertionError: assert 405 == 401
+E        +  where 405 = <Response [405 Method Not Allowed]>.status_code
+E        +    where <Response [405 Method Not Allowed]> = request('post', ('/api/vehicles' + ''), json={'make': 'Toyota', 'model': 'Camry', 'category': 'Sedan', 'price': '32500.25', ...})
+E        +      where request = <starlette.testclient.TestClient object at 0x7f032237b1d0>.request
+
+backend/tests/test_inventory.py:61: AssertionError
+__________________ test_all_routes_require_auth[put-/1-body1] __________________
+
+client = <starlette.testclient.TestClient object at 0x7f032237a870>
+method = 'put', path = '/1'
+body = {'make': 'Toyota', 'model': 'Camry', 'category': 'Sedan', 'price': '32500.25', ...}
+
+    @pytest.mark.parametrize('method,path,body', [('post','',CAR),('put','/1',CAR),('delete','/1',None),('post','/1/purchase',{'quantity':1}),('post','/1/restock',{'quantity':1}),('get','/search',None)])
+    def test_all_routes_require_auth(client, method, path, body):
+>       assert client.request(method,'/api/vehicles'+path,json=body).status_code == 401
+E       AssertionError: assert 404 == 401
+E        +  where 404 = <Response [404 Not Found]>.status_code
+E        +    where <Response [404 Not Found]> = request('put', ('/api/vehicles' + '/1'), json={'make': 'Toyota', 'model': 'Camry', 'category': 'Sedan', 'price': '32500.25', ...})
+E        +      where request = <starlette.testclient.TestClient object at 0x7f032237a870>.request
+
+backend/tests/test_inventory.py:61: AssertionError
+_________________ test_all_routes_require_auth[delete-/1-None] _________________
+
+client = <starlette.testclient.TestClient object at 0x7f032354e1e0>
+method = 'delete', path = '/1', body = None
+
+    @pytest.mark.parametrize('method,path,body', [('post','',CAR),('put','/1',CAR),('delete','/1',None),('post','/1/purchase',{'quantity':1}),('post','/1/restock',{'quantity':1}),('get','/search',None)])
+    def test_all_routes_require_auth(client, method, path, body):
+>       assert client.request(method,'/api/vehicles'+path,json=body).status_code == 401
+E       AssertionError: assert 404 == 401
+E        +  where 404 = <Response [404 Not Found]>.status_code
+E        +    where <Response [404 Not Found]> = request('delete', ('/api/vehicles' + '/1'), json=None)
+E        +      where request = <starlette.testclient.TestClient object at 0x7f032354e1e0>.request
+
+backend/tests/test_inventory.py:61: AssertionError
+_____________ test_all_routes_require_auth[post-/1/purchase-body3] _____________
+
+client = <starlette.testclient.TestClient object at 0x7f03234ddd90>
+method = 'post', path = '/1/purchase', body = {'quantity': 1}
+
+    @pytest.mark.parametrize('method,path,body', [('post','',CAR),('put','/1',CAR),('delete','/1',None),('post','/1/purchase',{'quantity':1}),('post','/1/restock',{'quantity':1}),('get','/search',None)])
+    def test_all_routes_require_auth(client, method, path, body):
+>       assert client.request(method,'/api/vehicles'+path,json=body).status_code == 401
+E       AssertionError: assert 404 == 401
+E        +  where 404 = <Response [404 Not Found]>.status_code
+E        +    where <Response [404 Not Found]> = request('post', ('/api/vehicles' + '/1/purchase'), json={'quantity': 1})
+E        +      where request = <starlette.testclient.TestClient object at 0x7f03234ddd90>.request
+
+backend/tests/test_inventory.py:61: AssertionError
+_____________ test_all_routes_require_auth[post-/1/restock-body4] ______________
+
+client = <starlette.testclient.TestClient object at 0x7f032354b860>
+method = 'post', path = '/1/restock', body = {'quantity': 1}
+
+    @pytest.mark.parametrize('method,path,body', [('post','',CAR),('put','/1',CAR),('delete','/1',None),('post','/1/purchase',{'quantity':1}),('post','/1/restock',{'quantity':1}),('get','/search',None)])
+    def test_all_routes_require_auth(client, method, path, body):
+>       assert client.request(method,'/api/vehicles'+path,json=body).status_code == 401
+E       AssertionError: assert 404 == 401
+E        +  where 404 = <Response [404 Not Found]>.status_code
+E        +    where <Response [404 Not Found]> = request('post', ('/api/vehicles' + '/1/restock'), json={'quantity': 1})
+E        +      where request = <starlette.testclient.TestClient object at 0x7f032354b860>.request
+
+backend/tests/test_inventory.py:61: AssertionError
+________________ test_all_routes_require_auth[get-/search-None] ________________
+
+client = <starlette.testclient.TestClient object at 0x7f032238d5e0>
+method = 'get', path = '/search', body = None
+
+    @pytest.mark.parametrize('method,path,body', [('post','',CAR),('put','/1',CAR),('delete','/1',None),('post','/1/purchase',{'quantity':1}),('post','/1/restock',{'quantity':1}),('get','/search',None)])
+    def test_all_routes_require_auth(client, method, path, body):
+>       assert client.request(method,'/api/vehicles'+path,json=body).status_code == 401
+E       AssertionError: assert 404 == 401
+E        +  where 404 = <Response [404 Not Found]>.status_code
+E        +    where <Response [404 Not Found]> = request('get', ('/api/vehicles' + '/search'), json=None)
+E        +      where request = <starlette.testclient.TestClient object at 0x7f032238d5e0>.request
+
+backend/tests/test_inventory.py:61: AssertionError
+=============================== warnings summary ===============================
+.venv/lib/python3.12/site-packages/fastapi/testclient.py:1
+  /workspace/scratch/820a941666ae/dealership/.venv/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED backend/tests/test_inventory.py::test_invalid_price_filter[min_price=-1]
+FAILED backend/tests/test_inventory.py::test_invalid_price_filter[min_price=100&max_price=1]
+FAILED backend/tests/test_inventory.py::test_invalid_price_filter[max_price=NaN]
+FAILED backend/tests/test_inventory.py::test_invalid_vehicle[price--1] - Asse...
+FAILED backend/tests/test_inventory.py::test_invalid_vehicle[price-1.234] - A...
+FAILED backend/tests/test_inventory.py::test_invalid_vehicle[quantity--1] - A...
+FAILED backend/tests/test_inventory.py::test_invalid_vehicle[quantity-1.5] - ...
+FAILED backend/tests/test_inventory.py::test_invalid_vehicle[quantity-True]
+FAILED backend/tests/test_inventory.py::test_invalid_vehicle[make-  ] - Asser...
+FAILED backend/tests/test_inventory.py::test_invalid_vehicle[model-] - Assert...
+FAILED backend/tests/test_inventory.py::test_invalid_vehicle[category-] - Ass...
+FAILED backend/tests/test_inventory.py::test_all_routes_require_auth[post--body0]
+FAILED backend/tests/test_inventory.py::test_all_routes_require_auth[put-/1-body1]
+FAILED backend/tests/test_inventory.py::test_all_routes_require_auth[delete-/1-None]
+FAILED backend/tests/test_inventory.py::test_all_routes_require_auth[post-/1/purchase-body3]
+FAILED backend/tests/test_inventory.py::test_all_routes_require_auth[post-/1/restock-body4]
+FAILED backend/tests/test_inventory.py::test_all_routes_require_auth[get-/search-None]
+ERROR backend/tests/test_inventory.py::test_crud_and_persistence - assert 405...
+ERROR backend/tests/test_inventory.py::test_search[make=toy-1] - assert 405 =...
+ERROR backend/tests/test_inventory.py::test_search[model=CAM-1] - assert 405 ...
+ERROR backend/tests/test_inventory.py::test_search[category=sedan-1] - assert...
+ERROR backend/tests/test_inventory.py::test_search[min_price=32500&max_price=32501-1]
+ERROR backend/tests/test_inventory.py::test_search[max_price=100-0] - assert ...
+ERROR backend/tests/test_inventory.py::test_search[make=Ford-0] - assert 405 ...
+ERROR backend/tests/test_inventory.py::test_search[make=%25-0] - assert 405 =...
+ERROR backend/tests/test_inventory.py::test_search[make=%27%20OR%201%3D1---0]
+ERROR backend/tests/test_inventory.py::test_purchase_and_out_of_stock - asser...
+ERROR backend/tests/test_inventory.py::test_invalid_purchase[0] - assert 405 ...
+ERROR backend/tests/test_inventory.py::test_invalid_purchase[-1] - assert 405...
+ERROR backend/tests/test_inventory.py::test_invalid_purchase[1.2] - assert 40...
+ERROR backend/tests/test_inventory.py::test_invalid_purchase[True] - assert 4...
+ERROR backend/tests/test_inventory.py::test_invalid_purchase[1000001] - asser...
+ERROR backend/tests/test_inventory.py::test_admin_permissions - assert 405 ==...
+ERROR backend/tests/test_inventory.py::test_admin_restock_delete - assert 405...
+ERROR backend/tests/test_inventory.py::test_concurrent_purchase_cannot_oversell
+ERROR backend/tests/test_inventory.py::test_restock_limit - assert 405 == 201
+17 failed, 13 passed, 1 warning, 19 errors in 3.41s
